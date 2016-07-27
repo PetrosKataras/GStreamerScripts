@@ -93,13 +93,18 @@ install_gst_dependencies_for_distro () {
 	if [ "$DISTRO" = "Debian" ] || [ "$DISTRO" = "Ubuntu" ]; then
 		sudo apt-get update
 		sudo apt-get -y install bison flex git autopoint libtool autoconf liborc-0.4-dev libglib2.0-dev yasm
-		sudo apt-get -y install gstreamer1.0-plugins-base \ # we install standard packages to pull dependencies. Its a bit rough but
-								gstreamer1.0-plugins-good \ # but works consistently across debian based distros.
-								gstreamer1.0-plugins-bad \  # i.e some fancier methods don't work well with Raspbian.
+
+		# we install standard packages to pull dependencies. Its a bit rough but
+		# but works consistently across debian based distros.
+		# i.e some fancier methods don't work well with Raspbian.
+		sudo apt-get -y install gstreamer1.0-plugins-base \ 
+								gstreamer1.0-plugins-good \ 
+								gstreamer1.0-plugins-bad \  
 								gstreamer1.0-plugins-ugly \
-								gstreamer1.0-libav;
+								gstreamer1.0-libav
+
 		if [ "$DISTRIB_ID" = "Raspbian" ]; then
-			sudo apt-get -y install gstreamer1.0-omx;
+			sudo apt-get -y install gstreamer1.0-omx
 		fi
 	elif [ "$DISTRO" = "Arch" ]; then
 		echo "Arch"
