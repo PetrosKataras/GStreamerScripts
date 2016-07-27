@@ -40,7 +40,7 @@ UNINSTALLED_ROOT=~/gst
 
 help() {
 	echo "==========================================================================================="
-	echo "This script will create a GStreamer uninstalled setup so that you kind take benefit of "
+	echo "This script will create a GStreamer uninstalled setup so that you can take benefit of "
 	echo "latest versions of the library and its plugins without having to install it system wide."
 	echo "==========================================================================================="
 	echo "Options:"
