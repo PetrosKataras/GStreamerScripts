@@ -75,7 +75,7 @@ check_distro() {
 		DISTRO_ID=$(lsb_release -is)
 		if [ "$DISTRO_ID" = "Raspbian" ]; then
 			GST_BAD_PLUGINS_CONFIGURE_FLAGS="--disable-gtk-doc --disable-opengl --enable-gles2 --enable-egl --disable-glx --disable-x11 --disable-wayland --enable-dispmanx  --with-gles2-module-name=/opt/vc/lib/libGLESv2.so --with-egl-module-name=/opt/vc/lib/libEGL.so"
-			COMPILE_FLAGS='CFLAGS="-I/opt/vc/include -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux/" LDFLAGS="-L/opt/vc/lib'
+			COMPILE_FLAGS='CFLAGS="-I/opt/vc/include -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux/" LDFLAGS="-L/opt/vc/lib"'
 		fi
 	elif [ -f /etc/arch-release ]; then
 	    DISTRO=Arch
