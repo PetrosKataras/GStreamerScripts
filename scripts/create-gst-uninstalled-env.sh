@@ -19,7 +19,7 @@
 
 set -e
 
-OPTS=`getopt -o vhns: --long help,branch:,omx-branch:,skip-depends -n 'parse-options' -- "$@"`
+OPTS=`getopt -o hb: --long help,branch:,omx-branch:,skip-depends -n 'parse-options' -- "$@"`
 
 eval set -- "$OPTS"
 
