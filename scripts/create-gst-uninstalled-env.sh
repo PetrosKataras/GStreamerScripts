@@ -103,7 +103,7 @@ install_gst_dependencies_for_distro () {
 								gstreamer1.0-plugins-ugly \
 								gstreamer1.0-libav
 
-		if [ "$DISTRIB_ID" = "Raspbian" ]; then
+		if [ "$DISTRO_ID" = "Raspbian" ]; then
 			sudo apt-get -y install gstreamer1.0-omx
 		fi
 	elif [ "$DISTRO" = "Arch" ]; then
@@ -185,6 +185,6 @@ for m in $GST_MODULES
 do
 	compile_gst_module "$m"
 done
-if [ "$DISTRIB_ID" = "Raspbian" ]; then
+if [ "$DISTRO_ID" = "Raspbian" ]; then
 	compile_gst_module $OMX_MODULE
 fi
