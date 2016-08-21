@@ -97,9 +97,9 @@ install_gst_dependencies_for_distro () {
 		# we install standard packages to pull dependencies. Its a bit rough but
 		# but works consistently across debian based distros.
 		# i.e some fancier methods don't work well with Raspbian.
-		sudo apt-get -y install gstreamer1.0-plugins-base \ 
-								gstreamer1.0-plugins-good \ 
-								gstreamer1.0-plugins-bad \  
+		sudo apt-get -y install gstreamer1.0-plugins-base \
+								gstreamer1.0-plugins-good \
+								gstreamer1.0-plugins-bad \
 								gstreamer1.0-plugins-ugly \
 								gstreamer1.0-libav
 
