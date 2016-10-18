@@ -134,7 +134,7 @@ clone_gst_module () {
 	  	git clone git://anongit.freedesktop.org/gstreamer/$1
 	  	cd $1
 	  	if test "$2" != "master"; then
-			git checkout -b $2 origin/$2
+			git checkout tags/$2 -b $2 
 	  	fi
 	  	git submodule init && git submodule update
 		cd ..
