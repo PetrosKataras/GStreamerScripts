@@ -92,7 +92,7 @@ install_gst_dependencies_for_distro () {
 	echo "==========================================================================================="
 	if [ "$DISTRO" = "Debian" ] || [ "$DISTRO" = "Ubuntu" ]; then
 		sudo apt-get update
-		sudo apt-get -y install bison flex git autopoint libtool autoconf liborc-0.4-dev libglib2.0-dev yasm
+		sudo apt-get -y install bison flex git autopoint libtool autoconf liborc-0.4-dev libglib2.0-dev yasm gettext
 
 		# we install standard packages to pull dependencies. Its a bit rough but
 		# but works consistently across debian based distros.
