@@ -69,7 +69,8 @@ check_distro() {
 	if [ -f /etc/lsb-release ]; then
 	    . /etc/lsb-release
 	    DISTRO=$DISTRIB_ID
-		GST_PLUGINS_BAD_CONFIGURE_FLAGS="--disable-gtk-doc --enable-opengl --enable-glx --enable-x11 --disable-wayland"
+		GST_PLUGINS_BAD_CONFIGURE_FLAGS="--disable-gtk-doc --enable-opengl --enable-glx --enable-x11 --disable-wayland
+        --disable-egl"
 	elif [ -f /etc/debian_version ]; then
 	    DISTRO=Debian
 		DISTRO_ID=$(lsb_release -is)
